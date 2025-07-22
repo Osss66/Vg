@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>عيد ميلاد رنوش 🌸</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffe6f0;
+            font-family: 'Tahoma', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            margin-top: 80px;
+            font-size: 40px;
+            color: #d63384;
+        }
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .message {
+            display: none;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 24px;
+            width: 70%;
+        }
+        .flower {
+            position: fixed;
+            top: -50px;
+            width: 30px;
+            height: 30px;
+            background-image: url('https://i.imgur.com/utM1W1i.png');
+            background-size: cover;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% {transform: translateY(-50px);}
+            100% {transform: translateY(110vh);}
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 Happy Birthday Ranoush! 🌸</h1>
+    <button onclick="document.getElementById('msg').style.display='block'">افتح الرسالة 💌</button>
+    <div id="msg" class="message">
+        رنوووشتي كل عام وانتي احلى حدا بهالدنيا<br>
+        يا احلى ضحكه واحلى عيون<br>
+        الله يسعدك ويكتبلك الخير وين ما تروحي ❤️
+    </div>
+
+    <!-- موسيقى YouTube -->
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/QvDb3YGYfcs?autoplay=1&loop=1&playlist=QvDb3YGYfcs" 
+    frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+    <!-- زهور متساقطة -->
+    <script>
+        function createFlower() {
+            const flower = document.createElement('div');
+            flower.classList.add('flower');
+            flower.style.left = Math.random() * 100 + "vw";
+            flower.style.animationDuration = 3 + Math.random() * 5 + "s";
+            document.body.appendChild(flower);
+
+            setTimeout(() => {
+                flower.remove();
+            }, 8000);
+        }
+        setInterval(createFlower, 500);
+    </script>
+
+</body>
+</html>
