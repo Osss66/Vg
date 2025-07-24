@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عيد ميلاد رنوووش</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffe6f0 url('https://i.imgur.com/h4XQySt.png') repeat;
+      font-family: 'Cairo', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }h1 {
+  font-size: 2.5em;
+  color: #d63384;
+  margin-top: 20px;
+  animation: fadeInDown 2s ease;
+}
+
+.cake {
+  width: 200px;
+  height: auto;
+  margin: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+#message {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  color: #333;
+  font-size: 1.2em;
+  max-width: 90%;
+  text-align: center;
+  display: none;
+  animation: fadeInDown 1.5s ease;
+}
+
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://dl.sndup.net/gkhz/khatafoni.mp3" type="audio/mpeg">
+  </audio>  <img src="https://i.imgur.com/AC5WcVP.png" alt="Birthday Cake" class="cake">  <h1>كل عام وانتي بخير ❤️</h1><button onclick="document.getElementById('message').style.display='block';">اضغطي هون يا رنوووش</button>
+
+  <div id="message">
+    رنوووشتي كل عام وانتي احلى حدا بهالدنيا يا احلى ضحكه واحلى عيون 💖<br>
+    الله يسعدك ويكتبلك الخير وين ما تروحي
+  </div>
+</body>
+</html>
